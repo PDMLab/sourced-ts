@@ -1,9 +1,10 @@
-# ignore all files in the test/ directory
-test/
+# ignore all files in the __tests__ / directory
+__tests__
+coverage
 
 # ignore ESLint and EditorConfig
 .editorconfig
-.eslintrc.JetBrains
+.eslintrc.js
 .prettierrc.js
 commitlint.config.js
 jest.config.js
