@@ -1,14 +1,14 @@
 {
   "name": "sourced-ts",
-  "version": "0.1.0",
-  "description": "Tiny framework for building models with the event sourcing  pattern (events and snapshots).",
+  "version": "0.0.0",
+  "description": "Tiny TypeScript framework for building models with the event sourcing  pattern (events and snapshots).",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "docs": "mocha -R doc -t 5000 > docs/docs.html",
     "lint": "eslint src __tests__",
     "lint:fix": "eslint --fix src __tests__",
-    "markdown": "mocha -R markdown -t 5000 > docs/docs.md",
     "test": "jest --config jest.config.js --coverage --verbose",
     "test:watch": "jest --config jest.config.js --watch --coverage --verbose",
     "precommit": "npm run lint:fix && npm run test",
@@ -16,6 +16,11 @@
     "prepare": "husky install",
     "release": "yarn build && standard-version"
   },
+  "keywords": [
+    "event-sourcing",
+    "eventsourcing",
+    "typescript"
+  ],
   "author": {
     "name": "Alexander Zeitler",
     "email": "alexander.zeitler@pdmlab.com"
