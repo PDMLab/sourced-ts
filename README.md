@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/github/workflow/status/pdmlab/sourced-ts/build)
+![Build Status](https://img.shields.io/github/workflow/status/pdmlab/sourced-ts/build)
 
 # sourced-ts
 
