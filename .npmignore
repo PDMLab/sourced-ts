@@ -5,6 +5,8 @@ coverage
 # ignore ESLint and EditorConfig
 .editorconfig
 .eslintrc.js
+.husky
+.github
 .prettierrc.js
 commitlint.config.js
 jest.config.js
