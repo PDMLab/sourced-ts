@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mateodelnorte/sourced.svg?branch=master)](https://travis-ci.org/mateodelnorte/sourced)
+[![Build Status](https://img.shields.io/github/workflow/status/pdmlab/sourced-ts/build)
 
 # sourced-ts
 
