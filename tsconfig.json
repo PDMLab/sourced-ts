@@ -11,6 +11,8 @@
     /* Report errors in .js files. */
     "sourceMap": true,
     /* Generates corresponding '.map' file. */
+    "declaration": true,
+    /* Generates corresponding '.d.ts' file. */
     // "strict": true,
     /* Allow implicit any */
     "noImplicitAny": false,
