@@ -123,10 +123,10 @@ class SourcedEntity extends EventEmitter {
    * Wrapper around the EventEmitter.emit method that adds a condition so events
    * are not fired during replay.
    */
-  emit(event: string, ...args: any[]): boolean {
+  emit(): boolean {
     if (!this.replaying) {
-      const params = [event, args]
-      events.EventEmitter.prototype.emit.apply(this, params)
+      // eslint-disable-next-line prefer-rest-params
+      events.EventEmitter.prototype.emit.apply(this, arguments)
     }
     return true
   }
