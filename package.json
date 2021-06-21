@@ -1,6 +1,6 @@
 {
   "name": "sourced-ts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Tiny TypeScript framework for building models with the event sourcing  pattern (events and snapshots).",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
