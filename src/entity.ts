@@ -123,9 +123,10 @@ class SourcedEntity extends EventEmitter {
    * Wrapper around the EventEmitter.emit method that adds a condition so events
    * are not fired during replay.
    */
-  emit(event: string, ...args: any[]) {
+  emit(event: string, ...args: any[]): boolean {
     if (!this.replaying) {
-      return events.EventEmitter.prototype.emit(event, ...args)
+      const params = [event, args]
+      events.EventEmitter.prototype.emit.apply(this, params)
     }
     return true
   }
