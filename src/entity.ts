@@ -125,8 +125,8 @@ class SourcedEntity extends EventEmitter {
    */
   emit(event: string, ...args: any[]): boolean {
     if (!this.replaying) {
-      // eslint-disable-next-line prefer-rest-params
-      events.EventEmitter.prototype.emit.apply(this, arguments)
+      const params = [event, args]
+      events.EventEmitter.prototype.emit.apply(this, params)
     }
     return true
   }
