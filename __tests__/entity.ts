@@ -109,6 +109,19 @@ describe('entity', function () {
       expect(handlerSpy.calledOnce).toBe(true)
       expect(handlerSpy.calledWith({ data: 'data' })).toBe(true)
     })
+    it('should emit EventEmitter style events with 2 params', function () {
+      const test = new TestEntity()
+
+      const handlerSpy = spy()
+
+      test.on('something.happened', handlerSpy)
+      test.emit('something.happened', { data: 'data' }, { data2: 'data2' })
+
+      expect(handlerSpy.calledOnce).toBe(true)
+      expect(handlerSpy.calledWith({ data: 'data' }, { data2: 'data2' })).toBe(
+        true
+      )
+    })
   })
   describe('#merge', function () {
     it('should merge a snapshot into the current snapshot, overwriting any common properties', function () {
