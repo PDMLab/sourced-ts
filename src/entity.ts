@@ -122,10 +122,10 @@ class SourcedEntity extends EventEmitter {
    * Wrapper around the EventEmitter.emit method that adds a condition so events
    * are not fired during replay.
    */
-  emit(event: string, ...messages: any): boolean {
+  emit(event: string, ...message: any): boolean {
     if (!this.replaying) {
       // eslint-disable-next-line prefer-rest-params
-      super.emit(event, ...messages)
+      super.emit(event, ...message)
     }
     return true
   }
