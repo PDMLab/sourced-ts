@@ -10,7 +10,7 @@ For example usage, see the [examples](./examples) and [tests](./test).
 
 Sourced-ts makes no assumptions about how you _store_ your events and snapshots. The library is small and tight with only the required functionality to define entities and their logic, enqueue and emit events, and track event state to later be persisted. To actually persist, use one of the following libraries or implement your own:
 
-- [sourced-repo-mongo](https://github.com/mateodelnorte/sourced-repo-mongo)
+- [sourced-repo-mongo-ts](https://github.com/pdmlab/sourced-repo-mongo-ts)
 
 # TypeScript Example
 
