@@ -1,4 +1,5 @@
 import Entity from '../src/entity'
+import { spy } from 'sinon'
 
 class TestEntity extends Entity {
   property: boolean
@@ -94,6 +95,19 @@ describe('entity', function () {
       expect(
         Array.prototype.slice.call(test.eventsToEmit[0], 1)[1].data2
       ).toEqual('data2')
+    })
+  })
+  describe('#emit', function () {
+    it('should emit EventEmitter style events', function () {
+      const test = new TestEntity()
+
+      const handlerSpy = spy()
+
+      test.on('something.happened', handlerSpy)
+      test.emit('something.happened', { data: 'data' })
+
+      expect(handlerSpy.calledOnce).toBe(true)
+      expect(handlerSpy.calledWith({ data: 'data' })).toBe(true)
     })
   })
   describe('#merge', function () {
