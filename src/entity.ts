@@ -1,7 +1,6 @@
 /* jslint node: true */
 
 import cloneDeep from 'lodash.clonedeep'
-import events from 'events'
 import debug from 'debug'
 import merge from 'lodash.merge'
 import util from 'util'
@@ -123,10 +122,10 @@ class SourcedEntity extends EventEmitter {
    * Wrapper around the EventEmitter.emit method that adds a condition so events
    * are not fired during replay.
    */
-  emit(event: string, message?: any): boolean {
+  emit(event: string, ...messages: any): boolean {
     if (!this.replaying) {
       // eslint-disable-next-line prefer-rest-params
-      events.EventEmitter.prototype.emit.apply(this, arguments)
+      super.emit(event, ...messages)
     }
     return true
   }
